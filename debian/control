@@ -1,0 +1,16 @@
+Source: asbits
+Section: utils
+Priority: optional
+Maintainer: Benjamin Toll <ben@benjamintoll.com>
+Build-Depends: debhelper-compat (= 13), gcc
+Standards-Version: 4.5.1
+Homepage: https://benjamintoll.com
+#Vcs-Browser: https://salsa.debian.org/debian/asbits
+#Vcs-Git: https://salsa.debian.org/debian/asbits.git
+Rules-Requires-Root: no
+
+Package: asbits
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Display hexadecimal, decimal and octal numbers in binary
+ In addition, installs htoi, itob and otio tools.
