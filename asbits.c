@@ -8,7 +8,7 @@
 
 unsigned long htoi(char *s) {
     unsigned long n = 0;
-    int i;
+    size_t i;
 
     for (i = 0; i < strlen(s); i++) {
         if (IS_DIGIT(s[i]))

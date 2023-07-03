@@ -1,12 +1,17 @@
-PREFIX=/usr
+CC      	= gcc
+WARN    	= -W -Wall
+TARGET		= asbits
+PREFIX		= /usr
 
-build: asbits
+.PHONY: build clean install
 
-asbits: asbits.c asbits.h
-	gcc -g -o asbits asbits.c
+build: $(TARGET)
+
+$(TARGET): $(TARGET).c $(TARGET).h
+	$(CC) $(WARN) -o $(TARGET) $(TARGET).c
 
 clean:
-	rm -f asbits
+	rm -f $(TARGET)
 
 # https://www.gnu.org/software/make/manual/html_node/DESTDIR.html
 install:
